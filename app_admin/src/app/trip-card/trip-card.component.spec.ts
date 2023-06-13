@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TripCardComponent } from './trip-card.component';
 
@@ -6,10 +6,14 @@ describe('TripCardComponent', () => {
   let component: TripCardComponent;
   let fixture: ComponentFixture<TripCardComponent>;
 
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TripCardComponent]
-    });
+      declarations: [ TripCardComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(TripCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
